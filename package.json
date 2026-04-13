@@ -1,14 +1,41 @@
 {
   "name": "csm-cl-mock",
-  "version": "0.1.0",
-  "description": "Standalone Consensus Layer mock server for CSM testing",
+  "version": "1.0.0",
+  "description": "Standalone Consensus Layer (Beacon API) mock server for CSM integration testing",
   "type": "module",
-  "bin": {
-    "cl-mock": "dist/cli/index.js"
+  "license": "MIT",
+  "author": "Roman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exromany/csm-test-cl.git"
   },
+  "homepage": "https://github.com/exromany/csm-test-cl#readme",
+  "bugs": {
+    "url": "https://github.com/exromany/csm-test-cl/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "beacon",
+    "beacon-api",
+    "consensus-layer",
+    "csm",
+    "lido",
+    "mock",
+    "testing"
+  ],
+  "bin": {
+    "csm-cl-mock": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "cli": "node dist/cli/index.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "commander": "^13.1.0",

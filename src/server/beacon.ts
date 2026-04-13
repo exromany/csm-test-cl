@@ -18,13 +18,13 @@ function buildValidator(
 
   return {
     index: String(entry.index ?? autoIndex),
-    balance: entry.balance ?? "32000000000",
+    balance: entry.balance ?? entry.effective_balance ?? "32000000000",
     status: API_STATUS[status] ?? status,
     validator: {
       pubkey,
       withdrawal_credentials:
         entry.withdrawal_credentials ?? WC_PLACEHOLDER,
-      effective_balance: "32000000000",
+      effective_balance: entry.effective_balance ?? "32000000000",
       slashed: entry.slashed ?? status.endsWith("_slashed"),
       activation_eligibility_epoch: "0",
       activation_epoch: epochs.activation_epoch,
