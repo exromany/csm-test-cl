@@ -18,6 +18,7 @@ export interface ValidatorEntry {
   status: ValidatorStatus;
   index?: number;
   balance?: string;
+  effective_balance?: string;
   withdrawal_credentials?: string;
   slashed?: boolean;
 }
