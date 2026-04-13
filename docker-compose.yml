@@ -1,0 +1,5 @@
+services:
+  cl-mock:
+    build: .
+    ports:
+      - "5052:5052"

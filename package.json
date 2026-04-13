@@ -1,0 +1,25 @@
+{
+  "name": "csm-cl-mock",
+  "version": "0.1.0",
+  "description": "Standalone Consensus Layer mock server for CSM testing",
+  "type": "module",
+  "bin": {
+    "cl-mock": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "hono": "^4.7.0",
+    "@hono/node-server": "^1.14.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
